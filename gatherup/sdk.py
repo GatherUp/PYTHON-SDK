@@ -51,11 +51,14 @@ class Client:
 
   def request(self, endpoint, data):
     data["clientId"] = self.__credentials.get_client_id()
+
     if self.__aggregate > 0:
       data["aggregateResponse"] = 1
+
     response = requests.post(
       self.__url + endpoint,
       json=data,
       headers={"Authorization": "Bearer " + self.__credentials.get_bearer()
     })
+
     return Response(response.content)
