@@ -1,5 +1,11 @@
 # GatherUp SDK 
 
+## Requirements
+
+* https://realpython.com/python-requests/
+
+## Example
+
 ```
 from gatherup.sdk import Client
 from gatherup.sdk import Credentials
